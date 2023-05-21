@@ -50,8 +50,8 @@ def _read_original_qqp(filename):
     count += 1
     if count == 1:
       continue
-    q1 = row["question1"].decode("utf-8")
-    q2 = row["question2"].decode("utf-8")
+    q1 = row["question1"]
+    q2 = row["question2"]
     _update_qqp_data(q1, int(row["qid1"]), qid_to_tokens)
     _update_qqp_data(q2, int(row["qid2"]), qid_to_tokens)
   return qid_to_tokens
